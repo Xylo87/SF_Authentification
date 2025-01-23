@@ -64,6 +64,16 @@ https://127.0.0.1:8001/home
 
 ---
 
-## 4. Auteur
+## 4. Bugs connus
+
+Occasionnellement, lors de la redirection vers l'application depuis le lien de validation d'email, un message d'erreur d'authentification (notamment CSRF) peut apparaître.
+Si un tel message apparaît, veuillez : 
+- déconnecter la *$_SESSION* 
+- vérifier la déconnexion en spécifiant la **Route** ```https://127.0.0.1:8001/home``` dans la barre d'URL
+- vider le cache de Symfony en tapant la commande ```symfony console cache:clear``` en console
+
+---
+
+## 5. Auteur
 Ce projet a été réalisé par Théo Arbogast (aka Xylo87).  
 N'hésitez pas à ouvrir une issue ou à me contacter pour toute suggestion ou question.
